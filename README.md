@@ -1,4 +1,4 @@
-# 6-factor-Smart-Doorlock
+# 5 Factor Authentication Smart Doorlock
 Features:
 1. Facerecognition
 2. Fingerprint
