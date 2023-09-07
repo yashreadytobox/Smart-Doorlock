@@ -194,7 +194,7 @@ if x=="400028422C06":
     name="Atharva"
     print (" ")
     fingerPrint()
-             #toaddr = "atharvagpardeshi@gmail.com"
+             #toaddr = "@gmail.com"
              #sendMail()
          
 elif x=="4000288DB055":#"400028341945":
@@ -203,7 +203,7 @@ elif x=="4000288DB055":#"400028341945":
     name="Simran"
     print (" ")
     fingerPrint()
-             #toaddr = "simrunnpatil@gmail.com"
+             #toaddr = "@gmail.com"
              #sendMail()
              
 elif x=="400028473619":
