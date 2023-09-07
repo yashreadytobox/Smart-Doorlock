@@ -14,7 +14,7 @@ import deepface
 from deepface import DeepFace
 
 #changes:
-#in send maill() - toaddr = "wasraz86@gmail.com" to ---
+#in send maill() - toaddr = "@gmail.com" to ---
 
 
 from email.mime.multipart import MIMEMultipart
@@ -25,12 +25,11 @@ from email.mime.text import MIMEText
 
 from email import encoders
 
-#fromaddr = "vips0907@gmail.com"    # change the email address accordingly
-fromaddr = "doorlock.mitwpu@gmail.com"
+#fromaddr = "@gmail.com"    # change the email address accordingly
+fromaddr = "@gmail.com"
 
 
 #!/bin/bash fswebcam -r 1280*960 /home/pi/Desktop/saved_pic/$test.jpg
-#old password = "viaps@1618"
 
 msg = MIMEMultipart()
 
@@ -44,7 +43,7 @@ def sendMail():
     msg.attach(MIMEText(text))
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login(fromaddr, "vhvxibussncacnks")
+    server.login(fromaddr, " ") #change password
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     print("Email Sent")
@@ -52,8 +51,8 @@ def sendMail():
     server.quit()
     
 def sendMail1(attach):
-    #fromaddr = "vips0907@gmail.com"    # change the email address accordingly
-    fromaddr = "doorlock.mitwpu@gmail.com"
+    #fromaddr = "@gmail.com"    # change the email address accordingly
+    fromaddr = "@gmail.com"
     toaddr = "user's_mailID"
  
     msg = MIMEMultipart()
@@ -73,7 +72,7 @@ def sendMail1(attach):
     mailServer.ehlo()
     mailServer.starttls()
     mailServer.ehlo()
-    mailServer.login(fromaddr, "vhvxibussncacnks")
+    mailServer.login(fromaddr, " ") #change password at " "
     mailServer.sendmail(fromaddr, toaddr, msg.as_string())
     # Should be mailServer.quit(), but that crashes...
     print("Email Sent")
