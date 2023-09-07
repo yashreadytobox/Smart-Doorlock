@@ -15,7 +15,7 @@ from email.mime.text import MIMEText
 
 from email import encoders
 
-fromaddr = "vips0907@gmail.com"    # change the email address accordingly
+fromaddr = "@gmail.com"    # change the email address accordingly
 
 msg = MIMEMultipart()
 
@@ -36,8 +36,8 @@ def sendMail():
     server.quit()
     
 def sendMail1(x):
-    fromaddr = "vips0907@gmail.com"    # change the email address accordingly
-    toaddr = "vips0907@gmail.com"
+    fromaddr = "@gmail.com"    # change the email address accordingly
+    toaddr = "@gmail.com"
  
     msg = MIMEMultipart()
  
@@ -150,27 +150,27 @@ try:
              print ("Card No - ",x)
              print ("Welcome Atharva")
              print (" ")
-             toaddr = "wasraz86@gmail.com"
+             toaddr = "@gmail.com"
              sendMail()
          
          elif x=="400028341945":
              print ("Card No - ",x)
              print ("Welcome Simran")
              print (" ")
-             toaddr = "simrunnpatil@gmail.com"
+             toaddr = "@gmail.com"
              sendMail()
 
          elif x=="400028422C06":
              print ("Card No - ",x)
              print ("Welcome Aditi")
              print (" ")
-             toaddr = "aditiuk24@gmail.com"
+             toaddr = "@gmail.com"
              sendMail()
 
          else:
              print ("Wrong Card.....")
              print (" ")
-             toaddr = "vips0907@gmail.com"#To the owner
+             toaddr = "@gmail.com"#To the owner
              sendMail1(x)        
          
          #print x
