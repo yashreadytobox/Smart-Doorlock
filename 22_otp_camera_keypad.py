@@ -14,7 +14,7 @@ import deepface
 from deepface import DeepFace
 
 #changes:
-#in send maill() - toaddr = "wasraz86@gmail.com" to ---
+#in send maill() - toaddr = "@gmail.com" to ---
 
 
 from email.mime.multipart import MIMEMultipart
@@ -25,7 +25,7 @@ from email.mime.text import MIMEText
 
 from email import encoders
 
-fromaddr = "vips0907@gmail.com"    # change the email address accordingly
+fromaddr = "@gmail.com"    # change the email address accordingly
 
 
 
@@ -44,7 +44,7 @@ def sendMail():
     msg.attach(MIMEText(text))
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login(fromaddr, "viaps@1618")
+    server.login(fromaddr, " ") #add password at " "
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     print("Email Sent")
@@ -52,8 +52,8 @@ def sendMail():
     server.quit()
     
 def sendMail1(attach):
-    fromaddr = "vips0907@gmail.com"    # change the email address accordingly
-    toaddr = "godbole.om@gmail.com"
+    fromaddr = "@gmail.com"    # change the email address accordingly
+    toaddr = "@gmail.com"
  
     msg = MIMEMultipart()
  
@@ -180,17 +180,17 @@ except:
 attach="/home/pi/Desktop/saved_pic/test.jpg"
 if(name[len(name)-12:]=="atharva1.jpg" or name[len(name)-12:]=="atharva2.jpg" or name[len(name)-12:]=="atharva3.jpg" or name[len(name)-12:]=="atharva4.jpg"):
     print("This is Atharva")
-    toaddr = "godbole.om@gmail.com"
+    toaddr = "@gmail.com"
     sendMail()
         
 elif(name[len(name)-10:]=="wasif1.jpg" or name[len(name)-10:]=="wasif2.jpg" ):
     print("This is Wasif")
-    toaddr = "godbole.om@gmail.com"
+    toaddr = "@gmail.com"
     sendMail()
         
 else:
     print("Unknown picture")
-    toaddr = "godbole.om@gmail.com"#To the owner
+    toaddr = "@gmail.com"#To the owner
     sendMail1(attach)
 os.remove("/home/pi/Desktop/saved_pic/test.jpg")
 
