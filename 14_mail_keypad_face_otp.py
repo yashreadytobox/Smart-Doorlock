@@ -21,7 +21,7 @@ from email.mime.text import MIMEText
 
 from email import encoders
 
-fromaddr = "vips0907@gmail.com"    # change the email address accordingly
+fromaddr = "@gmail.com"    # change the email address accordingly
 
 msg = MIMEMultipart()
 
@@ -43,8 +43,8 @@ def sendMail():
     server.quit()
     
 def sendMail1(attach):
-    fromaddr = "vips0907@gmail.com"    # change the email address accordingly
-    toaddr = "vips0907@gmail.com"
+    fromaddr = "@gmail.com"    # change the email address accordingly
+    toaddr = "@gmail.com"
  
     msg = MIMEMultipart()
  
@@ -63,7 +63,7 @@ def sendMail1(attach):
     mailServer.ehlo()
     mailServer.starttls()
     mailServer.ehlo()
-    mailServer.login(fromaddr, "viaps@1618")
+    mailServer.login(fromaddr, " ") #add password inside " "
     mailServer.sendmail(fromaddr, toaddr, msg.as_string())
     # Should be mailServer.quit(), but that crashes...
     print("Email Sent")
@@ -168,10 +168,10 @@ elif face_recognition.compare_faces([my_face4_encoding], unknown_face_encoding)[
      
 elif face_recognition.compare_faces([my_face1_encoding], unknown_face_encoding)[0] == True:
      print("This is Atharva")
-     toaddr = "atharvagpardeshi@gmail.com"
+     toaddr = "@gmail.com"
      sendMail()
         
 else:
      print("Unknown picture")
-     toaddr = "vips0907@gmail.com"#To the owner
+     toaddr = "@gmail.com"#To the owner
      sendMail1(attach)
