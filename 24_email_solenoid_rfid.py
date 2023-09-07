@@ -5,8 +5,8 @@ import os
 import serial
 from time import sleep
 def sendMail(attach):
-    fromaddr = "vips0907@gmail.com"    # change the email address accordingly
-    toaddr = "vips0907@gmail.com"
+    fromaddr = "@gmail.com"    # change the email address accordingly
+    toaddr = "@gmail.com"
  
     msg = MIMEMultipart()
  
@@ -25,7 +25,7 @@ def sendMail(attach):
     mailServer.ehlo()
     mailServer.starttls()
     mailServer.ehlo()
-    mailServer.login(fromaddr, "viaps@1618")
+    mailServer.login(fromaddr, " ") # add password at " "
     mailServer.sendmail(fromaddr, toaddr, msg.as_string())
     # Should be mailServer.quit(), but that crashes...
     print("Email Sent")
@@ -65,27 +65,27 @@ try:
              print ("Card No - ",x)
              print ("Welcome Atharva")
              print (" ")
-             toaddr = "atharvagpardeshi@gmail.com"
+             toaddr = "@gmail.com"
              sendMail()
          
          elif x=="400028341945":
              print ("Card No - ",x)
              print ("Welcome Simran")
              print (" ")
-             toaddr = "simrunnpatil@gmail.com"
+             toaddr = "@gmail.com"
              sendMail()
 
          elif x=="400028473619":
              print ("Card No - ",x)
              print ("Welcome Wasif")
              print (" ")
-             toaddr = "wasraz86@gmail.com"
+             toaddr = "@gmail.com"
              sendMail()
 
          else:
              print ("Wrong Card.....")
              print (" ")
-             toaddr = "vips0907@gmail.com"#To the owner
+             toaddr = "@gmail.com" #To the owner
              sendMail(x)        
          
          #print x
